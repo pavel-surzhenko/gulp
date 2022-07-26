@@ -27,6 +27,7 @@
 
 ## Установленные NPM пакеты:
 [gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  
+<<<<<<< HEAD
 [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin) Минификация HTML файлов  
 [gulp-sass](https://www.npmjs.com/package/gulp-sass) Компиляция Sass и Scss файлов    
 [gulp-less](https://www.npmjs.com/package/gulp-less) Компиляция Less файлов 
@@ -43,4 +44,13 @@
 [gulp-newer](https://www.npmjs.com/package/gulp-newer) Отслеживание только новых файлов 
 [browser-sync](https://www.npmjs.com/package/browser-sync) Автоматическое обновление сайта при изменении файлов  
 
+=======
+[gulp-less](https://www.npmjs.com/package/gulp-less) Компиляция Less файлов  
+[gulp-babel](https://www.npmjs.com/package/gulp-babel) Компиляция JS для старых браузеров  
+[gulp-concat](https://www.npmjs.com/package/gulp-concat) объединение файлов в один  
+[gulp-uglify](https://www.npmjs.com/package/gulp-uglify) Сжатие и оптимизация JS  
+[gulp-rename](https://www.npmjs.com/package/gulp-rename) Изменение имени файлов  
+[gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css) Минимизация css файлов  
+[del](https://www.npmjs.com/package/del) Удаления каталогов и файлов  
+>>>>>>> 5dab4d83d92b92eeb9a19440d166b46cbf53be7c
 
