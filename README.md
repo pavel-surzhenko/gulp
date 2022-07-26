@@ -39,6 +39,6 @@
 [gulp-clean-css](https://www.npmjs.com/package/gulp-clean-css) Минимизация css файлов  
 [del](https://www.npmjs.com/package/del) Удаления каталогов и файлов  
 [gulp-sourcemaps](https://www.npmjs.com/package/gulp-sourcemaps) Карта строк кода для инструментов разработчика  
-[gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) Сжатие изображений 
-[gulp-newer](https://www.npmjs.com/package/gulp-newer) Отслеживание только новых файлов 
+[gulp-imagemin](https://www.npmjs.com/package/gulp-imagemin) Сжатие изображений  
+[gulp-newer](https://www.npmjs.com/package/gulp-newer) Отслеживание только новых файлов  
 [browser-sync](https://www.npmjs.com/package/browser-sync) Автоматическое обновление сайта при изменении файлов  
