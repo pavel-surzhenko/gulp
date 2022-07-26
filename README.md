@@ -12,13 +12,13 @@
 Транспиляция языка Type Script  
 Преобразования кода ECMAScript 2015 + в обратно совместимую версию JavaScript с помощью Babel
 Минимизация JavaScript
-Объединение нескольких файлов JavaScript в один
-Сжатие изображений
-Отслеживание новых изображений, которые еще не были сжаты
-Отслеживание изменений в файлах и автоматический запуск повторной обработки
-Генерация sourcemaps
-Отображение размеров файлов в терминале
-Локальный сервер с автоматическим обновлением страницы при изменении файлов
+Объединение нескольких файлов JavaScript в один  
+Сжатие изображений  
+Отслеживание новых изображений, которые еще не были сжаты  
+Отслеживание изменений в файлах и автоматический запуск повторной обработки  
+Генерация sourcemaps  
+Отображение размеров файлов в терминале  
+Локальный сервер с автоматическим обновлением страницы при изменении файлов  
 
 ## Инструкция:
 1.Скачать все файлы в любою директорию  
@@ -29,7 +29,7 @@
 [gulp](https://www.npmjs.com/package/gulp) Сборщик Gulp  
 [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin) Минификация HTML файлов  
 [gulp-sass](https://www.npmjs.com/package/gulp-sass) Компиляция Sass и Scss файлов    
-[gulp-less](https://www.npmjs.com/package/gulp-less) Компиляция Less файлов 
+[gulp-less](https://www.npmjs.com/package/gulp-less) Компиляция Less файлов  
 [gulp-autoprefixer](https://www.npmjs.com/package/gulp-autoprefixer) Сборщик Gulp   
 [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) Сжатие и оптимизация JS  
 [gulp-typescript](https://www.npmjs.com/package/gulp-typescript) Преобразует Type Script в Java Script   
