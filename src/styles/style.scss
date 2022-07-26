@@ -1,12 +1,15 @@
-$font-stack: "sans-serif";
-$black:#000;
-body {
-    font-family:$font-stack ;
-    background-color: $black;
+//Import fonts=======================================================================================================
+@import url('');
+//Import null style==================================================================================================
+@import "nullstyle";
+
+main{
+	flex: 1 1 auto;
 }
-p{
-    color: $black;
-    animation:ease;
-    background-attachment: fixed;
+.wrapper{
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	background-color:#fff;
 }
-h1{color: green;}

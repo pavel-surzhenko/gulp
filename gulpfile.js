@@ -35,7 +35,11 @@ const paths = {
     },
     images: {
         src: 'src/img/**',
-        dest: 'dist/img'
+        dest: 'dist/img/'
+    },
+    files: {
+        src: 'src/files/**/*.*',
+        dest: 'dist/files/'
     }
 }
 
@@ -104,6 +108,13 @@ function img() {
     .pipe(gulp.dest(paths.images.dest))
 }
 
+//Копирование файлов
+function copy() {
+    return gulp.src(paths.files.src)
+    .pipe(newer(paths.files.dest))
+    .pipe(gulp.dest(paths.files.dest))
+}
+
 //отслеживание изменения в файлах и запуск лайв сервера
 function watch() {
     browserSync.init({
@@ -116,6 +127,7 @@ function watch() {
     gulp.watch(paths.styles.src, styles)
     gulp.watch(paths.scripts.src, scripts)
     gulp.watch(paths.images.src, img)
+    gulp.watch(paths.files.src, copy)
 }
 
 //для ручного запуска
@@ -124,10 +136,11 @@ export { img as img}
 export { html as html}
 export { styles as styles}
 export { scripts as scripts}
+export { copy as copy}
 export { watch as watch}
 export { build as build}
 export { build as default}
 
 //конечный билд
-const build = gulp.series(clean, html, gulp.parallel(styles, scripts, img), watch)
+const build = gulp.series(clean, html, gulp.parallel(styles, scripts, img, copy), watch)
 
