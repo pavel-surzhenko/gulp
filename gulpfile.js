@@ -5,7 +5,7 @@ import dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import rename from 'gulp-rename';
 import GulpCleanCss from 'gulp-clean-css';
-import ts from 'gulp-typescript'
+//import ts from 'gulp-typescript'
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
 import concat from 'gulp-concat';
@@ -17,13 +17,11 @@ import newer from 'gulp-newer';
 import browserSync from 'browser-sync';
 import {deleteAsync} from 'del';
 
-
-
 //пути к файлам
 const paths = {
     html: {  
         src: 'src/*.html', 
-        dest: 'dist'  
+        dest: 'dist/'  
     },
     styles: {  //стили
         src: ['src/styles/**/*.less', 'src/styles/**/*.sass', 'src/styles/**/*.scss'], //путь для рабочего файла с папки срс
@@ -53,7 +51,7 @@ function html() {
     return gulp.src(paths.html.src)
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest(paths.html.dest))
-    .pipe(browserSync.stream())
+    .pipe(browserSync.stream());
 }
 
 //стили
@@ -67,7 +65,8 @@ function styles() {
 			cascade: false
 		}))
         .pipe(GulpCleanCss({
-            level: 2
+            level: 2,
+            inline: ['none']
         }))
         .pipe(rename({
             basename: 'main',
@@ -75,17 +74,17 @@ function styles() {
         }))
         .pipe(sourcemaps.write('.'))
         .pipe(gulp.dest(paths.styles.dest))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 //скрипты
 function scripts() {
     return gulp.src(paths.scripts.src)
     .pipe(sourcemaps.init())
-    .pipe(ts({  //ts
-        noImplicitAny: true,
-        outFile: 'main.min.js'
-    }))
+    // .pipe(ts({  //ts
+    //     noImplicitAny: true,
+    //     outFile: 'main.min.js'
+    // }))
     .pipe(babel({
         presets: ['@babel/env']
     }))
@@ -120,7 +119,9 @@ function watch() {
     browserSync.init({
         server: {
             baseDir: "./dist/"
-        }
+        },
+        notify: false,
+        port: 3000,
     })
     gulp.watch(paths.html.dest).on('change', browserSync.reload)
     gulp.watch(paths.html.src, html)

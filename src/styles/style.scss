@@ -11,5 +11,44 @@ main{
 	display: flex;
 	flex-direction: column;
 	min-height: 100%;
+	background-color:#000;
+}
+
+//header----------------------------------
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
 	background-color:#fff;
+	height: 50px;
+	&__container {
+	}
+
+	&__logo {
+	}
+
+	&__menu {
+	}
+}
+.menu {
+
+	&__icon {
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+
+	&__link {
+	}
+
+	&__sub-list {
+	}
+
+	&__sub-link {
+	}
 }
